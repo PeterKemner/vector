@@ -81,11 +81,3 @@ TEST_CASE("Test *= vector", "[classic]")
    V *= Q;
    REQUIRE((V.x, V.y) == (594, 104));    
 };
-
-// TEST_CASE("Test <<", "[classic]")
-// { 
-//     Vector V = Vector(3, 4);
-//     std::string G = std::cout << V
-    
-//     REQUIRE(out == "(" + std::to_string(V.x) + "," + std::to_string(V.y) + ")");
-// };
