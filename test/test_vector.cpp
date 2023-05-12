@@ -76,15 +76,16 @@ TEST_CASE("Test += vector", "[classic]")
 
 TEST_CASE("Test *= vector", "[classic]")
 { 
-   Vector V = Vector(1, 2);
-   Vector Q = Vector(2, 1);
+   Vector V = Vector(66, 2);
+   Vector Q = Vector(9, 52);
    V *= Q;
-   REQUIRE((V.x, V.y) == (2, 2));    
+   REQUIRE((V.x, V.y) == (594, 104));    
 };
 
 // TEST_CASE("Test <<", "[classic]")
 // { 
 //     Vector V = Vector(3, 4);
-//     std::string G = std::cout << V << std::endl;
-//     REQUIRE(G == "(" + std::to_string(V.x) + "," + std::to_string(V.y) + ")");
+//     std::string G = std::cout << V
+    
+//     REQUIRE(out == "(" + std::to_string(V.x) + "," + std::to_string(V.y) + ")");
 // };
