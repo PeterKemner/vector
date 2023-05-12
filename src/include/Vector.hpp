@@ -13,7 +13,7 @@ public:
     Vector operator+() const;
     Vector operator+(const Vector& rhs) const;
     Vector operator*(const Vector& rhs) const;
-    Vector operator*(int i, const Vector v);
+    friend Vector operator*(int i, const Vector v);
 
     Vector& operator-=(const Vector& rhs);
     Vector& operator+=(const Vector& rhs);

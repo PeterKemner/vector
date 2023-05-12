@@ -36,11 +36,7 @@ Vector operator* (int i, const Vector v) {
     int newX = v.x * i;
     int newY = v.y * i;
     return Vector(newX, newY);
-}
-
-// Vector Vector::operator*(const Vector& rhs) const{
-//     return Vector(y*rhs.y, x*rhs.x);
-// };
+};
 
 Vector& Vector::operator-=(const Vector& rhs){
     x -= rhs.x;

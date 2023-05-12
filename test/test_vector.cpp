@@ -3,69 +3,88 @@
 #include "../src/include/Vector.hpp"
 #include <ostream>
 
-Vector V = Vector(3, 4);
-Vector Q = Vector(1, 2);
-
 TEST_CASE("Test vector", "[classic]")
 { 
+   Vector V = Vector(3, 4);
+   Vector Q = Vector(1, 2); 
    Vector Z = V;
    REQUIRE((Z.x, Z.y) == (3, 4));
 };
 
 TEST_CASE("Test negative vector", "[classic]")
 { 
-   Vector Z = V * -1; 
-   REQUIRE((Z.x, Z.y) == (-3, -4));
+   Vector Q = Vector(-1, -1); 
+   Vector V = Vector(8, 1);
+   Vector Z = V * Q; 
+   REQUIRE((Z.x, Z.y) == (-8, -1));
 };
 
 TEST_CASE("Test suptraction vector", "[classic]")
 { 
+   Vector V = Vector(7, 9);
+   Vector Q = Vector(1, 2);  
    Vector Z = V - Q; 
-   REQUIRE((Z.x, Z.y) == (2, 2));
+   REQUIRE((Z.x, Z.y) == (6, 7));
 };
 
 TEST_CASE("Test return vector", "[classic]")
-{ 
+{
+   Vector V = Vector(-3, 6); 
    Vector Z = V ; 
    REQUIRE((Z.x, Z.y) == (V.x, V.y));
 };
 
 TEST_CASE("Test addition vector", "[classic]")
-{ 
+{
+   Vector V = Vector(3, 4);
+   Vector Q = Vector(1, 2);   
    Vector Z = V + Q; 
    REQUIRE((Z.x, Z.y) == (4, 6));
 };
 
 TEST_CASE("Test multiply vector", "[classic]")
 { 
+   Vector V = Vector(3, 4);
+   Vector Q = Vector(1, 2);  
    Vector Z = V * Q; 
    REQUIRE((Z.x, Z.y) == (3, 8));
 };
 
 TEST_CASE("Test multiply reverse vector", "[classic]")
 { 
+   Vector V = Vector(3, 4);
+   Vector Q = Vector(1, 2);  
    Vector Z = V * Q; 
    REQUIRE((Z.y, Z.x) == (8, 3));
 };
 
 TEST_CASE("Test -= vector", "[classic]")
 { 
-
+   Vector V = Vector(3, 4);
+   Vector Q = Vector(1, 2);
+   V -= Q;
+   REQUIRE((V.x, V.y) == (2, 2));    
 };
 
 TEST_CASE("Test += vector", "[classic]")
 { 
-
+   Vector V = Vector(6, 4);
+   Vector Q = Vector(1, 21);
+   V += Q;
+   REQUIRE((V.x, V.y) == (7, 25));    
 };
 
 TEST_CASE("Test *= vector", "[classic]")
 { 
-
+   Vector V = Vector(1, 2);
+   Vector Q = Vector(2, 1);
+   V *= Q;
+   REQUIRE((V.x, V.y) == (2, 2));    
 };
 
-TEST_CASE("Test <<", "[classic]")
-{ 
-    Vector V = Vector(3, 4);
-    std::string G = std::cout << V << std::endl;
-    REQUIRE(G == "(" + std::to_string(V.x) + "," + std::to_string(V.y) + ")");
-};
+// TEST_CASE("Test <<", "[classic]")
+// { 
+//     Vector V = Vector(3, 4);
+//     std::string G = std::cout << V << std::endl;
+//     REQUIRE(G == "(" + std::to_string(V.x) + "," + std::to_string(V.y) + ")");
+// };

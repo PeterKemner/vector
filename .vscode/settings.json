@@ -25,6 +25,16 @@
             "cwd": "c:\\Users\\peter\\Desktop\\VSC\\C++\\Opdrachten\\vector",
             "binaryPath": "c:\\Users\\peter\\Desktop\\VSC\\C++\\Opdrachten\\vector\\test_vector",
             "binaryArgs": []
+        },
+        {
+            "cwd": "c:\\Users\\peter\\OneDrive\\Bureaublad\\VSC\\C++\\vector",
+            "binaryPath": "c:\\Users\\peter\\OneDrive\\Bureaublad\\VSC\\C++\\vector\\main",
+            "binaryArgs": []
+        },
+        {
+            "cwd": "c:\\Users\\peter\\OneDrive\\Bureaublad\\VSC\\C++\\vector",
+            "binaryPath": "c:\\Users\\peter\\OneDrive\\Bureaublad\\VSC\\C++\\vector\\test_vector",
+            "binaryArgs": []
         }
     ],
     "files.associations": {
