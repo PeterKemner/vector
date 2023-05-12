@@ -3,7 +3,7 @@
 #include "../src/include/Vector.hpp"
 #include <ostream>
 
-TEST_CASE("Test vector", "[classic]")
+TEST_CASE("Test vector")
 { 
    Vector V = Vector(3, 4);
    Vector Q = Vector(1, 2); 
@@ -11,7 +11,7 @@ TEST_CASE("Test vector", "[classic]")
    REQUIRE((Z.x, Z.y) == (3, 4));
 };
 
-TEST_CASE("Test negative vector", "[classic]")
+TEST_CASE("Test negative vector")
 { 
    Vector Q = Vector(-1, -1); 
    Vector V = Vector(8, 1);
@@ -19,7 +19,7 @@ TEST_CASE("Test negative vector", "[classic]")
    REQUIRE((Z.x, Z.y) == (-8, -1));
 };
 
-TEST_CASE("Test suptraction vector", "[classic]")
+TEST_CASE("Test suptraction vector")
 { 
    Vector V = Vector(7, 9);
    Vector Q = Vector(1, 2);  
@@ -27,14 +27,14 @@ TEST_CASE("Test suptraction vector", "[classic]")
    REQUIRE((Z.x, Z.y) == (6, 7));
 };
 
-TEST_CASE("Test return vector", "[classic]")
+TEST_CASE("Test return vector")
 {
    Vector V = Vector(-3, 6); 
    Vector Z = V ; 
    REQUIRE((Z.x, Z.y) == (V.x, V.y));
 };
 
-TEST_CASE("Test addition vector", "[classic]")
+TEST_CASE("Test addition vector")
 {
    Vector V = Vector(3, 4);
    Vector Q = Vector(1, 2);   
@@ -42,7 +42,7 @@ TEST_CASE("Test addition vector", "[classic]")
    REQUIRE((Z.x, Z.y) == (4, 6));
 };
 
-TEST_CASE("Test multiply vector", "[classic]")
+TEST_CASE("Test multiply vector")
 { 
    Vector V = Vector(3, 4);
    Vector Q = Vector(1, 2);  
@@ -50,7 +50,7 @@ TEST_CASE("Test multiply vector", "[classic]")
    REQUIRE((Z.x, Z.y) == (3, 8));
 };
 
-TEST_CASE("Test multiply reverse vector", "[classic]")
+TEST_CASE("Test multiply reverse vector")
 { 
    Vector V = Vector(3, 4);
    Vector Q = Vector(1, 2);  
@@ -58,7 +58,7 @@ TEST_CASE("Test multiply reverse vector", "[classic]")
    REQUIRE((Z.y, Z.x) == (8, 3));
 };
 
-TEST_CASE("Test -= vector", "[classic]")
+TEST_CASE("Test -= vector")
 { 
    Vector V = Vector(3, 4);
    Vector Q = Vector(1, 2);
@@ -66,7 +66,7 @@ TEST_CASE("Test -= vector", "[classic]")
    REQUIRE((V.x, V.y) == (2, 2));    
 };
 
-TEST_CASE("Test += vector", "[classic]")
+TEST_CASE("Test += vector")
 { 
    Vector V = Vector(6, 4);
    Vector Q = Vector(1, 21);
@@ -74,7 +74,7 @@ TEST_CASE("Test += vector", "[classic]")
    REQUIRE((V.x, V.y) == (7, 25));    
 };
 
-TEST_CASE("Test *= vector", "[classic]")
+TEST_CASE("Test *= vector")
 { 
    Vector V = Vector(66, 2);
    Vector Q = Vector(9, 52);
